@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_7586fab3f1ff6bff820cb4a8d6de850a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_7586fab3f1ff6bff820cb4a8d6de850a" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_7586fab3f1ff6bff820cb4a8d6de850a = L.map(
+                "map_7586fab3f1ff6bff820cb4a8d6de850a",
+                {
+                    center: [-15.7801, -47.9292],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 4,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_ef05243531cda07df94b6eab553b8dad = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Esri",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_ef05243531cda07df94b6eab553b8dad.addTo(map_7586fab3f1ff6bff820cb4a8d6de850a);
+        
+    
+            var marker_cluster_59eb5458b16a8bab3dd3c03a12d34583 = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var marker_2b201c428a9f9370c7d81be96ba14bcd = L.marker(
+                [-12.9822499, -38.4812772],
+                {
+}
+            ).addTo(marker_cluster_59eb5458b16a8bab3dd3c03a12d34583);
+        
+    
+            var icon_51d7ee152570c5d2d25d4cfd871cb8b7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "user",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_039bdf2164ecf8bc3a22a72e56ed582e = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_8794d00f8defba54424ff310a04afee2 = $(`<div id="html_8794d00f8defba54424ff310a04afee2" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 180px; font-size: 12px;">             <img src="https://servicosweb.cnpq.br/wspessoa/servletrecuperafoto?tipo=1&id=K4711356T4" style="width:100%; border-radius: 8px; margin-bottom: 8px;">             <b style="font-size: 14px;">Leandro de Moura França</b><br>             <span style="color: #666;">PosDoc</span><br>             <hr style="border: 0; border-top: 1px solid #eee;">             <a href="http://lattes.cnpq.br/8727892602689976" target="_blank" style="color: #0078ff; text-decoration: none;">📄 Currículo Lattes</a>         </div>         </div>`)[0];
+                popup_039bdf2164ecf8bc3a22a72e56ed582e.setContent(html_8794d00f8defba54424ff310a04afee2);
+            
+        
+
+        marker_2b201c428a9f9370c7d81be96ba14bcd.bindPopup(popup_039bdf2164ecf8bc3a22a72e56ed582e)
+        ;
+
+        
+    
+    
+                marker_2b201c428a9f9370c7d81be96ba14bcd.setIcon(icon_51d7ee152570c5d2d25d4cfd871cb8b7);
+            
+    
+            var marker_14aa88dbbf2b6db95437dd203d14410b = L.marker(
+                [-23.0055542, -46.8397726],
+                {
+}
+            ).addTo(marker_cluster_59eb5458b16a8bab3dd3c03a12d34583);
+        
+    
+            var icon_d4831a07b534ddb69e625a765c568d8b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "user",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c50fc85541612d0cb26a725c616709b2 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_5c746d9a8794b950f461f34882312fd6 = $(`<div id="html_5c746d9a8794b950f461f34882312fd6" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 180px; font-size: 12px;">             <img src="https://servicosweb.cnpq.br/wspessoa/servletrecuperafoto?tipo=1&id=K2705901A4" style="width:100%; border-radius: 8px; margin-bottom: 8px;">             <b style="font-size: 14px;">Geovana Geanine Padovani</b><br>             <span style="color: #666;">Mestrado</span><br>             <hr style="border: 0; border-top: 1px solid #eee;">             <a href="http://lattes.cnpq.br/1299106400377014" target="_blank" style="color: #0078ff; text-decoration: none;">📄 Currículo Lattes</a>         </div>         </div>`)[0];
+                popup_c50fc85541612d0cb26a725c616709b2.setContent(html_5c746d9a8794b950f461f34882312fd6);
+            
+        
+
+        marker_14aa88dbbf2b6db95437dd203d14410b.bindPopup(popup_c50fc85541612d0cb26a725c616709b2)
+        ;
+
+        
+    
+    
+                marker_14aa88dbbf2b6db95437dd203d14410b.setIcon(icon_d4831a07b534ddb69e625a765c568d8b);
+            
+    
+            var marker_d2d9208a242a95f18a36303db478fe36 = L.marker(
+                [-22.9056391, -47.059564],
+                {
+}
+            ).addTo(marker_cluster_59eb5458b16a8bab3dd3c03a12d34583);
+        
+    
+            var icon_1b86d0773a9d413225118170cdd5aeb6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "user",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_744db554e6aa53976d8d4debb33f2ce8 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_8101c3eb81f40bc3cb1e5843ca5890d7 = $(`<div id="html_8101c3eb81f40bc3cb1e5843ca5890d7" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 180px; font-size: 12px;">             <img src="https://servicosweb.cnpq.br/wspessoa/servletrecuperafoto?tipo=1&id=K4385233A6" style="width:100%; border-radius: 8px; margin-bottom: 8px;">             <b style="font-size: 14px;">Mylena Spina Cruz</b><br>             <span style="color: #666;">PosDoc</span><br>             <hr style="border: 0; border-top: 1px solid #eee;">             <a href=" http://lattes.cnpq.br/3038189885883183" target="_blank" style="color: #0078ff; text-decoration: none;">📄 Currículo Lattes</a>         </div>         </div>`)[0];
+                popup_744db554e6aa53976d8d4debb33f2ce8.setContent(html_8101c3eb81f40bc3cb1e5843ca5890d7);
+            
+        
+
+        marker_d2d9208a242a95f18a36303db478fe36.bindPopup(popup_744db554e6aa53976d8d4debb33f2ce8)
+        ;
+
+        
+    
+    
+                marker_d2d9208a242a95f18a36303db478fe36.setIcon(icon_1b86d0773a9d413225118170cdd5aeb6);
+            
+    
+            var marker_4314f6c193b2ef2aa337ab98948491ca = L.marker(
+                [-8.2696905, -49.2676864],
+                {
+}
+            ).addTo(marker_cluster_59eb5458b16a8bab3dd3c03a12d34583);
+        
+    
+            var icon_25a38f56c4ecfcda9416ada00dc35e2a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "user",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_50683b158b1b2db6b70f3ab13515a1ce = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_cbc96d09983d459e53708ea5ae060527 = $(`<div id="html_cbc96d09983d459e53708ea5ae060527" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 180px; font-size: 12px;">             <img src="https://servicosweb.cnpq.br/wspessoa/servletrecuperafoto?tipo=1&id=K8021722A5" style="width:100%; border-radius: 8px; margin-bottom: 8px;">             <b style="font-size: 14px;">Alexandre Varão Moura</b><br>             <span style="color: #666;">Doutorado</span><br>             <hr style="border: 0; border-top: 1px solid #eee;">             <a href="http://lattes.cnpq.br/2997064190647682" target="_blank" style="color: #0078ff; text-decoration: none;">📄 Currículo Lattes</a>         </div>         </div>`)[0];
+                popup_50683b158b1b2db6b70f3ab13515a1ce.setContent(html_cbc96d09983d459e53708ea5ae060527);
+            
+        
+
+        marker_4314f6c193b2ef2aa337ab98948491ca.bindPopup(popup_50683b158b1b2db6b70f3ab13515a1ce)
+        ;
+
+        
+    
+    
+                marker_4314f6c193b2ef2aa337ab98948491ca.setIcon(icon_25a38f56c4ecfcda9416ada00dc35e2a);
+            
+    
+            var marker_d070839082d9aaa95f67c6c37ad1c2cc = L.marker(
+                [-23.5506507, -46.6333824],
+                {
+}
+            ).addTo(marker_cluster_59eb5458b16a8bab3dd3c03a12d34583);
+        
+    
+            var icon_398bbad853d21ace7c9b480b8705e241 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "user",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0ba29a19046d1d458c5fb1e76c2d9710 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_fb35e9c9a2e1729928ec3cd04d904cab = $(`<div id="html_fb35e9c9a2e1729928ec3cd04d904cab" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 180px; font-size: 12px;">             <img src="https://servicosweb.cnpq.br/wspessoa/servletrecuperafoto?tipo=1&id=K1253138A6" style="width:100%; border-radius: 8px; margin-bottom: 8px;">             <b style="font-size: 14px;">Sarah Vitória Brito de Carvalho </b><br>             <span style="color: #666;">Iniciação Científica </span><br>             <hr style="border: 0; border-top: 1px solid #eee;">             <a href="http://lattes.cnpq.br/4426500794341737" target="_blank" style="color: #0078ff; text-decoration: none;">📄 Currículo Lattes</a>         </div>         </div>`)[0];
+                popup_0ba29a19046d1d458c5fb1e76c2d9710.setContent(html_fb35e9c9a2e1729928ec3cd04d904cab);
+            
+        
+
+        marker_d070839082d9aaa95f67c6c37ad1c2cc.bindPopup(popup_0ba29a19046d1d458c5fb1e76c2d9710)
+        ;
+
+        
+    
+    
+                marker_d070839082d9aaa95f67c6c37ad1c2cc.setIcon(icon_398bbad853d21ace7c9b480b8705e241);
+            
+    
+            var marker_48df73ed57c9236e35540c5af0e9df28 = L.marker(
+                [-23.3489848, -47.8490165],
+                {
+}
+            ).addTo(marker_cluster_59eb5458b16a8bab3dd3c03a12d34583);
+        
+    
+            var icon_abefecda265578c9e9f40f38a0bf9f95 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "user",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3959535ade7e22f85357594d1d609a56 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_6780215e1bc7aaf07b5f9fcc2d6fac79 = $(`<div id="html_6780215e1bc7aaf07b5f9fcc2d6fac79" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 180px; font-size: 12px;">             <img src="https://servicosweb.cnpq.br/wspessoa/servletrecuperafoto?tipo=1&id=K1528250Z8" style="width:100%; border-radius: 8px; margin-bottom: 8px;">             <b style="font-size: 14px;">Isabela Dias Abrantes</b><br>             <span style="color: #666;">Iniciação Científica </span><br>             <hr style="border: 0; border-top: 1px solid #eee;">             <a href="http://lattes.cnpq.br/4474341394598988" target="_blank" style="color: #0078ff; text-decoration: none;">📄 Currículo Lattes</a>         </div>         </div>`)[0];
+                popup_3959535ade7e22f85357594d1d609a56.setContent(html_6780215e1bc7aaf07b5f9fcc2d6fac79);
+            
+        
+
+        marker_48df73ed57c9236e35540c5af0e9df28.bindPopup(popup_3959535ade7e22f85357594d1d609a56)
+        ;
+
+        
+    
+    
+                marker_48df73ed57c9236e35540c5af0e9df28.setIcon(icon_abefecda265578c9e9f40f38a0bf9f95);
+            
+    
+            var marker_ebae18efb9c2167ab0fcd8d57f3494c8 = L.marker(
+                [-22.9056391, -47.059564],
+                {
+}
+            ).addTo(marker_cluster_59eb5458b16a8bab3dd3c03a12d34583);
+        
+    
+            var icon_09abc66a2441a8711b17318501e277a3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "user",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_426135b46fbb2789538e5d667b06218b = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_21b66783af08ceaf858e730a10a1dcaf = $(`<div id="html_21b66783af08ceaf858e730a10a1dcaf" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 180px; font-size: 12px;">             <img src="https://servicosweb.cnpq.br/wspessoa/servletrecuperafoto?tipo=1&id=K1555762E4" style="width:100%; border-radius: 8px; margin-bottom: 8px;">             <b style="font-size: 14px;">Yuri Cominatto Mignone</b><br>             <span style="color: #666;">Iniciação Científica</span><br>             <hr style="border: 0; border-top: 1px solid #eee;">             <a href="http://lattes.cnpq.br/9932635380786553" target="_blank" style="color: #0078ff; text-decoration: none;">📄 Currículo Lattes</a>         </div>         </div>`)[0];
+                popup_426135b46fbb2789538e5d667b06218b.setContent(html_21b66783af08ceaf858e730a10a1dcaf);
+            
+        
+
+        marker_ebae18efb9c2167ab0fcd8d57f3494c8.bindPopup(popup_426135b46fbb2789538e5d667b06218b)
+        ;
+
+        
+    
+    
+                marker_ebae18efb9c2167ab0fcd8d57f3494c8.setIcon(icon_09abc66a2441a8711b17318501e277a3);
+            
+    
+            var marker_14a42ee848e438c362a23f61d63ad625 = L.marker(
+                [-23.1887668, -46.884506],
+                {
+}
+            ).addTo(marker_cluster_59eb5458b16a8bab3dd3c03a12d34583);
+        
+    
+            var icon_a834501333543fb502e868c43c6714ce = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "user",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fb770d5a222232d1fa2b1b5ca961e9f9 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_304bc3822e64dd8925245ad1c73f0119 = $(`<div id="html_304bc3822e64dd8925245ad1c73f0119" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 180px; font-size: 12px;">             <img src="https://servicosweb.cnpq.br/wspessoa/servletrecuperafoto?tipo=1&id=K1269805J1" style="width:100%; border-radius: 8px; margin-bottom: 8px;">             <b style="font-size: 14px;">Eduarda Duarte da Silva</b><br>             <span style="color: #666;">Mestrado</span><br>             <hr style="border: 0; border-top: 1px solid #eee;">             <a href="http://lattes.cnpq.br/1328679016106022" target="_blank" style="color: #0078ff; text-decoration: none;">📄 Currículo Lattes</a>         </div>         </div>`)[0];
+                popup_fb770d5a222232d1fa2b1b5ca961e9f9.setContent(html_304bc3822e64dd8925245ad1c73f0119);
+            
+        
+
+        marker_14a42ee848e438c362a23f61d63ad625.bindPopup(popup_fb770d5a222232d1fa2b1b5ca961e9f9)
+        ;
+
+        
+    
+    
+                marker_14a42ee848e438c362a23f61d63ad625.setIcon(icon_a834501333543fb502e868c43c6714ce);
+            
+    
+            var marker_0eb33eef8578163e434128149808411c = L.marker(
+                [-23.5324859, -46.7916801],
+                {
+}
+            ).addTo(marker_cluster_59eb5458b16a8bab3dd3c03a12d34583);
+        
+    
+            var icon_d3b37a73bfba5238cbeacac13cd41584 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "user",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7467790f7851b76e4c3e26378bab5ca6 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_f4398ceb38193ec8e337d3e5abdc17ee = $(`<div id="html_f4398ceb38193ec8e337d3e5abdc17ee" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 180px; font-size: 12px;">             <img src="https://servicosweb.cnpq.br/wspessoa/servletrecuperafoto?tipo=1&id=K8931299D5" style="width:100%; border-radius: 8px; margin-bottom: 8px;">             <b style="font-size: 14px;">Caio Cesar Pestana Prado</b><br>             <span style="color: #666;">Mestrado</span><br>             <hr style="border: 0; border-top: 1px solid #eee;">             <a href="http://lattes.cnpq.br/8522272863694327" target="_blank" style="color: #0078ff; text-decoration: none;">📄 Currículo Lattes</a>         </div>         </div>`)[0];
+                popup_7467790f7851b76e4c3e26378bab5ca6.setContent(html_f4398ceb38193ec8e337d3e5abdc17ee);
+            
+        
+
+        marker_0eb33eef8578163e434128149808411c.bindPopup(popup_7467790f7851b76e4c3e26378bab5ca6)
+        ;
+
+        
+    
+    
+                marker_0eb33eef8578163e434128149808411c.setIcon(icon_d3b37a73bfba5238cbeacac13cd41584);
+            
+    
+            var marker_252663dc508d8bb90c72684ad8716f38 = L.marker(
+                [-3.7932167, -38.5280359],
+                {
+}
+            ).addTo(marker_cluster_59eb5458b16a8bab3dd3c03a12d34583);
+        
+    
+            var icon_329ca6334ad313e83817d22fef5e5442 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "user",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2f92474a6b28c5228c84fca982352e9f = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_7219f5170f9d64f7b7f05ffa8b6cc877 = $(`<div id="html_7219f5170f9d64f7b7f05ffa8b6cc877" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 180px; font-size: 12px;">             <img src="https://via.placeholder.com/100" style="width:100%; border-radius: 8px; margin-bottom: 8px;">             <b style="font-size: 14px;">Jackson Albuquerque Luna Filho </b><br>             <span style="color: #666;">Iniciação Científica </span><br>             <hr style="border: 0; border-top: 1px solid #eee;">             <a href="nan" target="_blank" style="color: #0078ff; text-decoration: none;">📄 Currículo Lattes</a>         </div>         </div>`)[0];
+                popup_2f92474a6b28c5228c84fca982352e9f.setContent(html_7219f5170f9d64f7b7f05ffa8b6cc877);
+            
+        
+
+        marker_252663dc508d8bb90c72684ad8716f38.bindPopup(popup_2f92474a6b28c5228c84fca982352e9f)
+        ;
+
+        
+    
+    
+                marker_252663dc508d8bb90c72684ad8716f38.setIcon(icon_329ca6334ad313e83817d22fef5e5442);
+            
+    
+            var marker_bc4b5bb2e42c898cceda092016f19db6 = L.marker(
+                [-21.1776315, -47.8100983],
+                {
+}
+            ).addTo(marker_cluster_59eb5458b16a8bab3dd3c03a12d34583);
+        
+    
+            var icon_f1b394aa821f480a41be05ab92a7ba47 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "user",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_412f365c314d47881921b6bc682abbb2 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_130ec17c96be0b36869374cf07395c9a = $(`<div id="html_130ec17c96be0b36869374cf07395c9a" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 180px; font-size: 12px;">             <img src="https://servicosweb.cnpq.br/wspessoa/servletrecuperafoto?tipo=1&id=K4868091Y1" style="width:100%; border-radius: 8px; margin-bottom: 8px;">             <b style="font-size: 14px;">Andre Cunha Paiva</b><br>             <span style="color: #666;">Doutorado</span><br>             <hr style="border: 0; border-top: 1px solid #eee;">             <a href="http://lattes.cnpq.br/8186956925888979" target="_blank" style="color: #0078ff; text-decoration: none;">📄 Currículo Lattes</a>         </div>         </div>`)[0];
+                popup_412f365c314d47881921b6bc682abbb2.setContent(html_130ec17c96be0b36869374cf07395c9a);
+            
+        
+
+        marker_bc4b5bb2e42c898cceda092016f19db6.bindPopup(popup_412f365c314d47881921b6bc682abbb2)
+        ;
+
+        
+    
+    
+                marker_bc4b5bb2e42c898cceda092016f19db6.setIcon(icon_f1b394aa821f480a41be05ab92a7ba47);
+            
+    
+            var marker_a038f0260320238a2843a956d9c6da05 = L.marker(
+                [-20.1597921, -44.8739341],
+                {
+}
+            ).addTo(marker_cluster_59eb5458b16a8bab3dd3c03a12d34583);
+        
+    
+            var icon_0c0d59e77d56b05ad6af81fc4fa6f3fa = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "user",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a9c022f93446de722f5dc5c39a865728 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_2bb06cf496e36ee70c171d0c97673464 = $(`<div id="html_2bb06cf496e36ee70c171d0c97673464" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 180px; font-size: 12px;">             <img src="https://servicosweb.cnpq.br/wspessoa/servletrecuperafoto?tipo=1&id=K4073460U3" style="width:100%; border-radius: 8px; margin-bottom: 8px;">             <b style="font-size: 14px;">Bianca Ferreira da Silva</b><br>             <span style="color: #666;">Pós-Doc</span><br>             <hr style="border: 0; border-top: 1px solid #eee;">             <a href="http://lattes.cnpq.br/4475128532708602" target="_blank" style="color: #0078ff; text-decoration: none;">📄 Currículo Lattes</a>         </div>         </div>`)[0];
+                popup_a9c022f93446de722f5dc5c39a865728.setContent(html_2bb06cf496e36ee70c171d0c97673464);
+            
+        
+
+        marker_a038f0260320238a2843a956d9c6da05.bindPopup(popup_a9c022f93446de722f5dc5c39a865728)
+        ;
+
+        
+    
+    
+                marker_a038f0260320238a2843a956d9c6da05.setIcon(icon_0c0d59e77d56b05ad6af81fc4fa6f3fa);
+            
+    
+            var marker_0c7f5fc931d913443404bfb02ee8daaa = L.marker(
+                [-22.9056391, -47.059564],
+                {
+}
+            ).addTo(marker_cluster_59eb5458b16a8bab3dd3c03a12d34583);
+        
+    
+            var icon_7a56a76982f24cfeb9caab0c12e7ed7b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "user",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8b9fe93d84a6725a58d421ff735bc933 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_c0644aa14acafa4c1c1505e5486e0299 = $(`<div id="html_c0644aa14acafa4c1c1505e5486e0299" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 180px; font-size: 12px;">             <img src="https://servicosweb.cnpq.br/wspessoa/servletrecuperafoto?tipo=1&id=K9503296J6" style="width:100%; border-radius: 8px; margin-bottom: 8px;">             <b style="font-size: 14px;">Larissa Cristina da Silva </b><br>             <span style="color: #666;">Iniciação Científica </span><br>             <hr style="border: 0; border-top: 1px solid #eee;">             <a href="https://lattes.cnpq.br/1290249112959518" target="_blank" style="color: #0078ff; text-decoration: none;">📄 Currículo Lattes</a>         </div>         </div>`)[0];
+                popup_8b9fe93d84a6725a58d421ff735bc933.setContent(html_c0644aa14acafa4c1c1505e5486e0299);
+            
+        
+
+        marker_0c7f5fc931d913443404bfb02ee8daaa.bindPopup(popup_8b9fe93d84a6725a58d421ff735bc933)
+        ;
+
+        
+    
+    
+                marker_0c7f5fc931d913443404bfb02ee8daaa.setIcon(icon_7a56a76982f24cfeb9caab0c12e7ed7b);
+            
+    
+            var marker_6b97cbabfff18030a4565d5143e16d17 = L.marker(
+                [-20.4277515, -40.3773071],
+                {
+}
+            ).addTo(marker_cluster_59eb5458b16a8bab3dd3c03a12d34583);
+        
+    
+            var icon_0b9de2b82efa251b598c52bc91ed71df = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "user",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b412d49b0a217909a80f93ab319e28ec = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_35aa9daf76d4a3c088cc0f243db22ba2 = $(`<div id="html_35aa9daf76d4a3c088cc0f243db22ba2" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 180px; font-size: 12px;">             <img src="https://servicosweb.cnpq.br/wspessoa/servletrecuperafoto?tipo=1&id=K1145476P6" style="width:100%; border-radius: 8px; margin-bottom: 8px;">             <b style="font-size: 14px;">Beatriz de Souza Merlo</b><br>             <span style="color: #666;">Mestrado</span><br>             <hr style="border: 0; border-top: 1px solid #eee;">             <a href="http://lattes.cnpq.br/5782541089196151" target="_blank" style="color: #0078ff; text-decoration: none;">📄 Currículo Lattes</a>         </div>         </div>`)[0];
+                popup_b412d49b0a217909a80f93ab319e28ec.setContent(html_35aa9daf76d4a3c088cc0f243db22ba2);
+            
+        
+
+        marker_6b97cbabfff18030a4565d5143e16d17.bindPopup(popup_b412d49b0a217909a80f93ab319e28ec)
+        ;
+
+        
+    
+    
+                marker_6b97cbabfff18030a4565d5143e16d17.setIcon(icon_0b9de2b82efa251b598c52bc91ed71df);
+            
+    
+            var marker_0747ad1a7d79e3f179b841f0536ece0a = L.marker(
+                [-23.5506507, -46.6333824],
+                {
+}
+            ).addTo(marker_cluster_59eb5458b16a8bab3dd3c03a12d34583);
+        
+    
+            var icon_d8c7461bd5aee6bca91f5ba5bd15c9d9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "user",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2b08d2e8177189295683275fb82a568d = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_3eaa5adec992f29e02039bdffffc3a34 = $(`<div id="html_3eaa5adec992f29e02039bdffffc3a34" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 180px; font-size: 12px;">             <img src="https://via.placeholder.com/100" style="width:100%; border-radius: 8px; margin-bottom: 8px;">             <b style="font-size: 14px;">Amanda Lima Salazar</b><br>             <span style="color: #666;">Iniciação Científica</span><br>             <hr style="border: 0; border-top: 1px solid #eee;">             <a href="nan" target="_blank" style="color: #0078ff; text-decoration: none;">📄 Currículo Lattes</a>         </div>         </div>`)[0];
+                popup_2b08d2e8177189295683275fb82a568d.setContent(html_3eaa5adec992f29e02039bdffffc3a34);
+            
+        
+
+        marker_0747ad1a7d79e3f179b841f0536ece0a.bindPopup(popup_2b08d2e8177189295683275fb82a568d)
+        ;
+
+        
+    
+    
+                marker_0747ad1a7d79e3f179b841f0536ece0a.setIcon(icon_d8c7461bd5aee6bca91f5ba5bd15c9d9);
+            
+    
+            var marker_ec5f36033bfd0355215935e6f67afe87 = L.marker(
+                [-23.6866428, -46.6246935],
+                {
+}
+            ).addTo(marker_cluster_59eb5458b16a8bab3dd3c03a12d34583);
+        
+    
+            var icon_a7999f7b684874cc14f11222a2a6f202 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "user",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_acbb4cc4da017329214eb5060cdda756 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_374d4fa4bf8220e85613b18ae9b78137 = $(`<div id="html_374d4fa4bf8220e85613b18ae9b78137" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 180px; font-size: 12px;">             <img src="https://servicosweb.cnpq.br/wspessoa/servletrecuperafoto?tipo=1&id=K1560650A3" style="width:100%; border-radius: 8px; margin-bottom: 8px;">             <b style="font-size: 14px;">Carla Mariella Barbosa Santos</b><br>             <span style="color: #666;">Iniciação Científica</span><br>             <hr style="border: 0; border-top: 1px solid #eee;">             <a href="http://lattes.cnpq.br/7303051997519702" target="_blank" style="color: #0078ff; text-decoration: none;">📄 Currículo Lattes</a>         </div>         </div>`)[0];
+                popup_acbb4cc4da017329214eb5060cdda756.setContent(html_374d4fa4bf8220e85613b18ae9b78137);
+            
+        
+
+        marker_ec5f36033bfd0355215935e6f67afe87.bindPopup(popup_acbb4cc4da017329214eb5060cdda756)
+        ;
+
+        
+    
+    
+                marker_ec5f36033bfd0355215935e6f67afe87.setIcon(icon_a7999f7b684874cc14f11222a2a6f202);
+            
+    
+            marker_cluster_59eb5458b16a8bab3dd3c03a12d34583.addTo(map_7586fab3f1ff6bff820cb4a8d6de850a);
+        
+</script>
+</html>
